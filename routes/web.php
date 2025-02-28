@@ -10,5 +10,5 @@ Route::get('/blog',function () {
     return 'Welcome in blog ';
 });
 Route::get('/blog/{name}',function ($name) {
-    return 'Welcome in blog ' . $name . '!';
+    return "<h1>". 'Welcome in blog '  . $name .' !'. "</h1>" ;
 });
