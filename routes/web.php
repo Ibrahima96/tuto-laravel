@@ -3,21 +3,28 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('bicoin.welcome');
 });
 
 Route::get('/home', function () {
-    return view('home');
+    return view('bicoin.home');
+});
+Route::get('/about', function () {
+    return view('bicoin.about');
 });
 Route::get('/contact',function () {
 
     $data = [
-        'name' => 'Mohamed',
-        'email' => 'mouhame@gmail.com',
+        'name' => 'Pluton',
+        'email' => 'plutondelete@gmail.com',
+        'address' => 'Rue de la paix',
         'phone' => '0656565656'
+
     ];
-    return view('contact', ['data' => $data]);
+    return view('bicoin.contact', ['data' => $data]);
 });
+
+
 
 
 
