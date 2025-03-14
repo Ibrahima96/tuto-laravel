@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+
 
 Route::get('/', function () {
     return view('bicoin.welcome');
@@ -12,20 +14,7 @@ Route::get('/home', function () {
 Route::get('/about', function () {
     return view('bicoin.about');
 });
-Route::get('/contact',function () {
-
-    $data = [
-        'name' => 'Pluton',
-        'email' => 'plutondelete@gmail.com',
-        'address' => 'Rue de la paix',
-        'phone' => '0656565656'
-
-    ];
-    return view('bicoin.contact', ['data' => $data]);
-});
-
-
-
+Route::get('/contact', [UserController::class, 'index']);
 
 
 
